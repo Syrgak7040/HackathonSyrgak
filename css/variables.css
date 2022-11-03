@@ -1,0 +1,8 @@
+:root {
+  /* Font-Sizes */
+  --nav-size: 24px;
+  --main-size: 20px;
+  /* Colors */
+  --main-color: rgb(211, 210, 234);
+  --primary-color: rgb(62, 62, 62);
+}
