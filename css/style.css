@@ -9,6 +9,8 @@ body {
   margin: 0 auto;
 }
 
+/* ---------------------Navigation Start----------------------- */
+
 .navbar {
   margin-top: 40px;
 }
@@ -37,6 +39,14 @@ body {
   display: none;
 }
 
+.navigation__item a:hover {
+  color: var(--secondary-color);
+}
+
+/* ---------------------Navigation End---------------------- */
+
+/* ----------------------Header Start----------------------- */
+
 .header__profile {
   padding-right: 43px;
   margin-top: 120px;
@@ -57,21 +67,16 @@ body {
   display: flex;
 }
 
-.header p {
-  font-family: "Inter", sans-serif;
-}
-
 .Name-title {
   margin-top: 125px;
-  margin-left: 235px;
-  position: absolute;
+  margin-left: 35px;
   color: var(--main-color);
   font-size: 70px;
 }
 
 .Name-title_info {
   font-size: 30px;
-  color: rgb(152, 141, 204);
+  color: var(--secondary-color);
 }
 
 .app-icons {
@@ -85,30 +90,31 @@ body {
 }
 
 .header p {
-  margin-left: 50px;
-  margin-top: 403px;
+  font-family: "Inter", sans-serif;
+  margin-top: 85px;
   color: var(--main-color);
   font-size: var(--main-size);
 }
 
 .header__item {
   font-weight: bold;
-  margin-left: 80px;
+  margin-left: 95px;
   margin-top: 150px;
   font-size: var(--nav-size);
   color: var(--primary-color);
 }
 
-.navigation__item a:hover {
-  color: rgb(152, 141, 204);
-}
+/* -------------------Header End-------------------- */
+
+/* -----------------Services Start------------------ */
 
 .services-title {
   display: flex;
   justify-content: center;
-  color: rgb(152, 141, 204);
+  color: var(--secondary-color);
   font-size: 55px;
   margin-top: 160px;
+  letter-spacing: 7px;
 }
 
 .services-list {
@@ -127,7 +133,7 @@ body {
 
 .item__title {
   font-size: var(--nav-size);
-  color: rgb(152, 141, 204);
+  color: var(--secondary-color);
 }
 
 .item__description {
@@ -136,10 +142,15 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* ----------------Services End----------------- */
+
+/* ----------------Skills Start----------------- */
+
 .skills-title {
+  letter-spacing: 7px;
   display: flex;
   justify-content: center;
-  color: rgb(152, 141, 204);
+  color: var(--secondary-color);
   font-size: 55px;
   margin-top: 160px;
 }
@@ -153,8 +164,9 @@ body {
 }
 
 .progress-text {
+  font-family: "Inter", sans-serif;
   margin-top: 45px;
-  color: rgb(152, 141, 204);
+  color: var(--secondary-color);
   font-size: 17px;
 }
 
@@ -163,10 +175,15 @@ body {
   width: 500px;
 }
 
+/* ----------------Skills End----------------- */
+
+/* ---------------Contact Start--------------- */
+
 .contact-title {
+  letter-spacing: 7px;
   display: flex;
   justify-content: center;
-  color: rgb(152, 141, 204);
+  color: var(--secondary-color);
   font-size: 55px;
   margin-top: 160px;
 }
@@ -175,6 +192,7 @@ body {
   margin-top: 90px;
   display: flex;
   justify-content: center;
+  margin-bottom: 200px;
 }
 
 .list-group {
@@ -185,11 +203,77 @@ body {
 }
 
 .list-group-item {
-  border: 13px solid rgb(44, 45, 48);
-  margin-top: -1px;
+  border-radius: 5px;
+  border: 13px solid rgb(56, 58, 61);
   background-color: rgb(174, 163, 225);
   padding: 12px;
   width: 320px;
+  margin-bottom: 16px;
+}
+
+.world-map {
+  margin-right: 50px;
+  height: 400px;
+  width: 530px;
+}
+
+.world-map {
+  filter: invert(70%);
+}
+
+/* ---------------Contact End---------------- */
+
+/* -------------Keyframes Start-------------- */
+
+.services-title:hover {
+  animation-name: item-titles;
+  animation-duration: 1.5s;
+  border-radius: 50%;
+}
+
+.skills-title:hover {
+  animation-name: item-titles;
+  animation-duration: 1.5s;
+  border-radius: 50%;
+}
+
+.contact-title:hover {
+  animation-name: item-titles;
+  animation-duration: 1.5s;
+  border-radius: 50%;
+}
+
+.list-group-item:hover {
+  animation-name: list-items;
+  animation-duration: 0.32s;
+}
+
+@keyframes item-titles {
+  50% {
+    color: rgb(255, 255, 255);
+    letter-spacing: 18px;
+    background-color: rgb(55, 57, 60);
+  }
+  100% {
+  }
+}
+
+@keyframes list-items {
+  50% {
+    border: 13px solid rgb(81, 84, 88);
+  }
+  100% {
+  }
+}
+
+/* --------------Keyframes end--------------- */
+
+/* ---------------Media Start---------------- */
+
+@media (max-width: 800px) {
+  .services-list {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 880px) {
@@ -203,7 +287,14 @@ body {
 
 @media (max-width: 1150px) {
   .progress-container {
-    display: block;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .world-map {
+    display: none;
   }
 }
 
@@ -212,9 +303,42 @@ body {
     display: block;
   }
   .Name-title {
-    margin-left: 0;
+    text-align: center;
+    margin: 0;
+  }
+  .app-icons {
+    justify-content: center;
   }
   .header p {
     margin-left: 0;
   }
+  .profile {
+    display: flex;
+    justify-content: center;
+  }
+  .header__profile {
+    margin: 0 auto;
+  }
+  .list-container {
+    margin-bottom: 100;
+  }
 }
+
+@media (max-width: 550px) {
+  .progress-container progress {
+    width: 250px;
+  }
+  .list-container {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 410px) {
+  .list-group-item {
+    width: 240px;
+  }
+  .list-container {
+    margin-bottom: 20px;
+  }
+}
+
+/* ---------------Media End---------------- */
